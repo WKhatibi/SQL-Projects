@@ -64,7 +64,8 @@ ORDER BY 1 ASC
 SELECT `MONTH`, total_off, 
 SUM(total_off) OVER(order by  `MONTH`) AS rolling_total
 FROM Rolling_total;
-#####################################
+
+
 SELECT company, YEAR(`date`), SUM(total_laid_off) AS sum_total
 FROM layoffs_staging2
 GROUP BY company, YEAR(`date`)
